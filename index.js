@@ -82,3 +82,46 @@ console.log(x);//5
 let z = (3,45);
 console.log(z);//45
 
+/**what will be the output og the below code */
+console.log([] + []);//""blank
+console.log(true + 5);//6 note: boolean true means 1 and false means 0;
+
+/**what will be the output og the below code */
+function myFunc() {
+    return 'Bangladesh';
+};
+const result = myFunc `hello`;
+console.log(result)//"Bangladesh"
+
+/**how to make all text contents of a website editable */
+/**ans body => contenteditable = true */
+
+
+/**what will be the output og the below code */
+function ab() {
+    // console.log(`the length is ${this.length}`);
+    const res = this.length;
+    return res;
+};
+const obj = {
+    length: 23,
+    method: function(b) {
+        return arguments[0]();
+    } 
+}
+console.log(obj.method(ab, 4, 5));
+
+/**what will be the output og the below code */
+const cons = "constructor";
+console.log(cons[cons](01));
+
+/**what will be the output og the below code */
+console.log(("Bangladesh").__proto__.__proto__.__proto__)//null
+
+//make a function that sort its atguments without using loops
+function sortArg() {
+    // console.log(arguments[0]);
+    return [].slice.call(arguments).sort();
+};
+console.log(sortArg(1,4,6,3,2,5));//[1,2,3,4,5,6]
+
